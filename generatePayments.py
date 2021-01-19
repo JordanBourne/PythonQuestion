@@ -343,7 +343,7 @@ def generate_random_payment():
     # Get business and its info
     business = company_list[company_index]
     company_name = list(business.keys())[0]
-    company_name = typo_the_name(company_name)
+    # company_name = typo_the_name(company_name)
     address_list = list(business.values())[0]
     address = address_list[random.randrange(len(address_list))]
     amount = str(random.randrange(2000))
@@ -361,7 +361,7 @@ def typo_the_name(name):
 
 if __name__ == '__main__':
     payments = get_payment_list()
-    with open('./payments.csv', 'w') as csvfile:
+    with open('./payments_no_typo.csv', 'w') as csvfile:
         writer = csv.writer(csvfile, delimiter=',')
         for row in payments:
             writer.writerow(row)
