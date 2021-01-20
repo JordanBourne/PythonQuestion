@@ -7,3 +7,11 @@ It would be helpful to us to be able to be aware of each unique address,
 but also how the addresses are grouped
 '''
 
+
+def group_payments():
+    # implement
+    return
+
+
+if __name__ == '__main__':
+    group_payments()
